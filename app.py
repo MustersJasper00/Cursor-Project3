@@ -4,7 +4,13 @@ import os
 
 app = Flask(__name__)
 
-FEEDBACK_FILE = 'feedback.json'
+
+# Use an absolute path for the feedback file so the application can
+# locate it regardless of the current working directory.
+FEEDBACK_FILE = (
+    r"C:\Users\muste\Desktop\PROGRAMMING\CODE\Git Project Repositories - 0 to 100\Cursor-Project3\feedback.json"
+)
+
 
 def load_feedback():
     if os.path.exists(FEEDBACK_FILE):
