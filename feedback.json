@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2025-06-03T18:49:19.991Z",
+    "name": "1",
+    "ratings": {
+      "productQuality": 1,
+      "recommendation": 1,
+      "communication": 4
+    },
+    "averageRating": "2.0",
+    "additionalFeedback": "2"
+  }
+]

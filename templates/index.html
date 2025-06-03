@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Collector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        
+        <form id="feedbackForm">
+            <div class="question">
+                <label>What is your name?</label>
+                <input type="text" name="name" placeholder="Leave empty to remain anonymous">
+            </div>
+
+            <div class="question">
+                <label>What do you think about our product quality?</label>
+                <div class="rating" data-question="1">
+                    <i class="fas fa-star" data-value="1"></i>
+                    <i class="fas fa-star" data-value="2"></i>
+                    <i class="fas fa-star" data-value="3"></i>
+                    <i class="fas fa-star" data-value="4"></i>
+                    <i class="fas fa-star" data-value="5"></i>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Would you recommend us to others?</label>
+                <div class="rating" data-question="2">
+                    <i class="fas fa-star" data-value="1"></i>
+                    <i class="fas fa-star" data-value="2"></i>
+                    <i class="fas fa-star" data-value="3"></i>
+                    <i class="fas fa-star" data-value="4"></i>
+                    <i class="fas fa-star" data-value="5"></i>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>How would you rate the communication with our team?</label>
+                <div class="rating" data-question="3">
+                    <i class="fas fa-star" data-value="1"></i>
+                    <i class="fas fa-star" data-value="2"></i>
+                    <i class="fas fa-star" data-value="3"></i>
+                    <i class="fas fa-star" data-value="4"></i>
+                    <i class="fas fa-star" data-value="5"></i>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Additional Feedback</label>
+                <textarea name="additional_feedback" rows="4" placeholder="Please share any additional thoughts or suggestions"></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <div class="feedback-section">
+            <h2>Previous Feedback</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Filter by average rating:</label>
+                    <select id="ratingFilter">
+                        <option value="all">All Ratings</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Show last:</label>
+                    <select id="limitFilter">
+                        <option value="all">All Feedbacks</option>
+                        <option value="5">5 Feedbacks</option>
+                        <option value="10">10 Feedbacks</option>
+                        <option value="25">25 Feedbacks</option>
+                        <option value="50">50 Feedbacks</option>
+                    </select>
+                </div>
+            </div>
+            <table id="feedbackTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Average Rating</th>
+                        <th>Additional Feedback</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
