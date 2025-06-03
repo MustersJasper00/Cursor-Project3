@@ -1,11 +1,22 @@
 [
   {
-    "timestamp": "2025-06-03T18:49:19.991Z",
+    "timestamp": "2025-06-03T20:20:20.719Z",
     "name": "1",
     "ratings": {
       "productQuality": 1,
       "recommendation": 1,
-      "communication": 4
+      "communication": 1
+    },
+    "averageRating": "1.0",
+    "additionalFeedback": "1"
+  },
+  {
+    "timestamp": "2025-06-03T20:20:28.703Z",
+    "name": "2",
+    "ratings": {
+      "productQuality": 2,
+      "recommendation": 2,
+      "communication": 2
     },
     "averageRating": "2.0",
     "additionalFeedback": "2"
